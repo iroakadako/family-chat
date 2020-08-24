@@ -1,0 +1,43 @@
+.main
+  .main__header
+    .main__header__box
+      .main__header__box__group
+        %h2.main__header__box__group-name
+          test
+        %ul.main__header__box__group-member
+          %li.main__header__box__group-member__list
+            Member :&nbsp;
+          %li.main__header__box__group-memper__name
+            Lisa
+      .main__header__box__edit
+        =link_to "#", class: 'main__header__box__edit-btn' do
+          = icon('fas', 'edit')
+
+  .main__contents
+    .main__contents__content
+      .main__contents__content__box
+        .main__contents__content__box__current-box
+          .main__contents__content__box__current-box__current-name
+            Lisa
+          %p.main__contents__content__box__current-box__date
+            2020/07/27
+        .main__contents__content__box__current-message
+          まだメッセージはありません
+        .main__contents__content__box__current-box
+          .main__contents__content__box__current-box__current-name
+            masa
+          %p.main__contents__content__box__current-box__date
+            2020/07/27
+        .main__contents__content__box__current-message
+          Hello!
+  .main__form
+    %form.main__form__box
+      = form_for @message do |form|
+        .main__form__box__message
+          = form.text_field :content, class: 'main__form__box__message__new-message', placeholder: 'Type a message'
+          .main__form__box__message__img
+            = form.label :image, class: 'main__form__box__message__img__icon' do
+              = icon('fas', 'image')
+              = form.file_field :image, class: 'main__form__box__message__img__file'
+        
+        = form.submit 'Send', class: 'main__form__box__submit-btn' 

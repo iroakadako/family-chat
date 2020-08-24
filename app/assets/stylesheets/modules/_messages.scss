@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+@mixin font-name {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  .sidebar {
+    width: 300px;   
+    background-color: turquoise;
+    &__header {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      
+      &__box {
+        height: 20px;
+        width: 260px;
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        &__username {
+          @include font-name();
+          font-size: 16px;
+          line-height: center;
+        }
+        &__icons {
+          display: flex;
+          &__edit {
+          margin-right: 5px;
+          }
+          a {
+            @include font-name();
+          }
+        }
+      }
+      
+    }
+    &__groups {
+      height: calc(100vh - 100px);
+      background-color: turquoise;
+      border-top: 1px solid whitesmoke;
+      padding: 0 20px;
+      &__group {
+        height: 100%;
+        width: 100%;
+        
+        &__name {
+          color: #ffffff;
+          font-size: 15px;
+          padding-top: 20px;
+          padding-bottom: 5px;
+        }
+        &__latest-message {
+          color: #ffffff;
+          font-size: 11px;
+          padding-bottom: 40px;
+        }
+        
+      }
+    }
+  }
+
+  .main {
+    width: calc(100vw - 300px);
+    background-color: #ffffff;
+    &__header {
+      height: 100px;
+      border-bottom: #eeeeee;
+      &__box {
+        display: flex;
+        justify-content: space-between;
+        &__group {
+          margin-left: 40px;
+          
+        
+        }
+          &__group-name {
+            color: #333333;
+            font-size: 20px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+          }
+          &__group-member {
+            font-size: 12px;
+            color: #999999;
+            display: flex;
+            &__list {
+            
+            }
+
+          }
+          &__edit {
+            margin-right: 40px;
+            height: 40px;
+            line-height: 40px;
+            width: 72px;
+            margin-top: 28px;
+            padding: 0 20px;
+            // border: 1px solid #38aef0;
+
+            a {
+              color: turquoise;
+              text-decoration: none;
+              font-size: 20px;
+              
+            }
+          }
+      }
+    }
+
+    &__contents {
+      height: calc(100vh - 190px);
+      background-color: #fafafa;
+      &__content {
+        margin-left: 40px;
+        padding-top: 35px;
+        &__box {
+          
+          &__current-box {
+            display: flex;
+            &__current-name {
+              color: #333333;
+              font-size: 16px;
+              margin-bottom: 12px;
+            }
+            &__date {
+              font-size: 12px;
+              color: #999999;
+            }
+          }
+          &__current-message {
+            font-size: 14px;
+            color: #434A54;
+            margin-bottom: 46px;
+          }
+        }
+      }
+    }
+    &__form {
+      height: 90px;
+      background-color: white;
+      border-top: 1px solid turquoise;
+      padding: 20px 40px;
+      &__box {
+        display: flex;
+        
+        &__message {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          position: relative;
+          border: 2px solid turquoise;
+         
+          &__new-message {
+            height: 50px;
+            width: 100%;
+            border-style: none;
+            padding: 0 40px 0 10px;
+          }
+        
+          &__img{
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+           
+            &__file {
+              display: none;
+            }
+          }
+          
+        }
+        &__submit-btn {
+          margin-left: 15px;
+          width: 100px;
+          height: 50px;
+          background-color: turquoise;
+          color: white;
+          padding: 0 30px;
+          border-color: turquoise;
+          cursor: pointer;
+        }
+      
+      }
+    }
+  }
+}
