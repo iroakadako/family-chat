@@ -17,7 +17,6 @@
       height: 100px;
       display: flex;
       align-items: center;
-      
       &__box {
         height: 20px;
         width: 260px;
@@ -38,8 +37,7 @@
             @include font-name();
           }
         }
-      }
-      
+      } 
     }
     &__groups {
       height: calc(100vh - 100px);
@@ -61,7 +59,6 @@
           font-size: 11px;
           padding-bottom: 40px;
         }
-        
       }
     }
   }
@@ -77,8 +74,6 @@
         justify-content: space-between;
         &__group {
           margin-left: 40px;
-          
-        
         }
           &__group-name {
             color: #333333;
@@ -90,10 +85,6 @@
             font-size: 12px;
             color: #999999;
             display: flex;
-            &__list {
-            
-            }
-
           }
           &__edit {
             margin-right: 40px;
@@ -102,13 +93,10 @@
             width: 72px;
             margin-top: 28px;
             padding: 0 20px;
-            // border: 1px solid #38aef0;
-
             a {
               color: turquoise;
               text-decoration: none;
               font-size: 20px;
-              
             }
           }
       }
@@ -121,7 +109,6 @@
         margin-left: 40px;
         padding-top: 35px;
         &__box {
-          
           &__current-box {
             display: flex;
             &__current-name {
@@ -163,18 +150,15 @@
             border-style: none;
             padding: 0 40px 0 10px;
           }
-        
           &__img{
             cursor: pointer;
             position: absolute;
             top: 10px;
             right: 10px;
-           
             &__file {
               display: none;
             }
           }
-          
         }
         &__submit-btn {
           margin-left: 15px;
@@ -186,7 +170,6 @@
           border-color: turquoise;
           cursor: pointer;
         }
-      
       }
     }
   }

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  
-  get 'posts/new', to: 'posts#new'
-  root "messages#index"
+  devise_for :users
 
-  resources :messages, only:[:index]
+  root "messages#index"
+  resources :users, only: [:edit, :update]
   
 end

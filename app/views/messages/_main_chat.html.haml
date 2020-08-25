@@ -32,7 +32,7 @@
           Hello!
   .main__form
     %form.main__form__box
-      = form_for @message do |form|
+      -# = form_for @message do |form|
         .main__form__box__message
           = form.text_field :content, class: 'main__form__box__message__new-message', placeholder: 'Type a message'
           .main__form__box__message__img
