@@ -48,17 +48,22 @@
         height: 100%;
         width: 100%;
         
+        
         &__name {
           color: #ffffff;
           font-size: 15px;
           padding-top: 20px;
           padding-bottom: 5px;
+          
+          
         }
         &__latest-message {
           color: #ffffff;
           font-size: 11px;
           padding-bottom: 40px;
+         
         }
+        
       }
     }
   }
