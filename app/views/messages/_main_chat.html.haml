@@ -10,7 +10,7 @@
           %li.main__header__box__group-memper__name
             Lisa
       .main__header__box__edit
-        =link_to "#", class: 'main__header__box__edit-btn' do
+        =link_to edit_group_path(current_user), class: 'main__header__box__edit-btn' do
           = icon('fas', 'edit')
 
   .main__contents
@@ -32,7 +32,7 @@
           Hello!
   .main__form
     %form.main__form__box
-      = form_for @message do |form|
+      -# = form_for @message do |form|
         .main__form__box__message
           = form.text_field :content, class: 'main__form__box__message__new-message', placeholder: 'Type a message'
           .main__form__box__message__img
